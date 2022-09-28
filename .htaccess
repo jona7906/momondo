@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^$                      view_app.php [NC,L]
+RewriteRule ^login                  view_login.php [NC,L]
+RewriteRule ^admin                  view_admin.php [NC,L]
+RewriteRule ^stays                  view_stays.php [NC,L]
+RewriteRule ^campers                view_campers.php [NC,L]
+RewriteRule ^car_hire               view_car_hire.php [NC,L]
+
+ErrorDocument 404 /view_404.php
